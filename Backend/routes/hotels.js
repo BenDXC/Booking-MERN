@@ -1,4 +1,5 @@
 import express from "express";
+/* Hotel Schema*/
 import {
   countByCity,
   countByType,

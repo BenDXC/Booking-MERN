@@ -7,3 +7,5 @@ router.post("/register", register);
 router.post("/login", login);
 
 export default router;
+
+/* Client Connections to the Backend */

@@ -33,3 +33,4 @@ export const verifyAdmin = (req, res, next) => {
     }
   });
 };
+/* JWT Function for Authentication  */

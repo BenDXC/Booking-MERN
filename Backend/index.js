@@ -1,3 +1,4 @@
+/* Imports */
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -9,6 +10,7 @@ import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 
+/* Backend connected to Environment Variables*/
 const app = express();
 dotenv.config();
 
@@ -30,10 +32,13 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+/* Routes for the Backend related to the Front End*/
 app.use("/Backend/auth", authRoute);
 app.use("/Backend/users", usersRoute);
 app.use("/Backend/hotels", hotelsRoute);
 app.use("/Backend/rooms", roomsRoute);
+
+/* JSON Header Responses */
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
